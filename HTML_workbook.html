@@ -1,1 +1,85 @@
+<form action="/Get_file.html" method="GET" name="Text" target="_blank" novalidate>
+    <div>
+        <label for="Text">Write some text</label>
+        <input name="Text" id="Text" value="Text">
+    </div>
+    <div>
+        <button>Send it</button>
+    </div>
+</form>
 
+<iframe width="420" height="315" src="https://www.youtube.com/embed/sampleYoutube?autoplay=1&mute=1"> </iframe>
+
+<form>
+    <script type="text/javascript">
+        function showLocation(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+            alert("Latitude : " + latitude + " Longitude: " + longitude);
+        }
+
+        function errorHandler(err) {
+            if (err.code == 1) {
+                alert("Error: Access is denied!");
+            } else if (err.code == 2) {
+                alert("Error: Position is unavailable!");
+            }
+        }
+
+        function getLocation() {
+
+            if (navigator.geolocation) {
+
+                // timeout at 60000 milliseconds (60 seconds)
+                var options = {
+                    timeout: 60000
+                };
+                navigator.geolocation.getCurrentPosition(showLocation, errorHandler, options);
+            } else {
+                alert("Sorry, browser does not support geolocation!");
+            }
+        }
+    </script>
+</form>
+
+<form>
+    <input type="button" onclick="getLocation();" value="Get Location" />
+</form>
+
+<form>
+    <style>
+        #div1,
+        #div2 {
+            float: left;
+            width: 100px;
+            height: 75px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+
+    <body>
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img src="https://media.tenor.com/images/74f11fa31850f04f5f14422625107530/tenor.gif" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="65">
+        </div>
+
+        <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </body>
+
+</form>
