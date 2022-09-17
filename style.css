@@ -1,0 +1,54 @@
+h1 {
+    font-style: bold;
+    font-family: 'Liberation' Sans;
+    text-align: center;
+    font-size: 28px;
+}
+
+h2 {
+    font-style: bold;
+    font-family: 'Liberation' Sans;
+    text-align: center;
+    font-size: 18px;
+}
+
+h3 {
+    font-family: 'Liberation' Serif;
+    text-align: left;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+h4 {
+    font-family: 'Liberation' Serif;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+h5 {
+    font-family: 'Liberation' Serif;
+    font-style: italic;
+    font-style: bold;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+h6 {
+    font-style: bold;
+    font-family: 'Liberation' Sans;
+    text-align: left;
+    font-size: 18px;
+}
+
+ul li {
+    font-family: Liberation serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+p {
+    font-family: Liberation serif;
+    font-size: 12px;
+    font-weight: normal;
+}
